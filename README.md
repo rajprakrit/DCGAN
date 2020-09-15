@@ -33,8 +33,8 @@ for the downsampling and the upsampling respectively.
 
 ## Hyperparameters for this Implementation
 Hyperparameters are chosen as given in the paper.
-* mini-batch size: 128
-* learning rate: 0.0002
+* mini-batch size: 64
+* learning rate: 0.001
 * momentum term beta1: 0.5
 * slope of leak of LeakyReLU: 0.2
 * For the optimizer Adam (with beta2 = 0.999) has been used instead of SGD as described in the paper.
@@ -61,11 +61,6 @@ By default, GPU is used for training if available.
 </p>
 <i>D: Discriminator, G: Generator</i>
 
-## Generating New Images
-To generate new unseen images, run **`generate.py`**.
-```sh
-python3 generate.py --load_path /path/to/pth/checkpoint --num_output n
-```
 **Generated Images**
 <p align="center">
   <i>After Epoch 1:</i> <img src="images/Generated_Epoch_1.png" title="Generated Images after 1st Epoch" alt="Generated Images after 1st Epoch">
